@@ -6,10 +6,10 @@ class Msl < Formula
   license "MIT"
 
   depends_on :macos
-  depends_on xcode: ["15.0", :build]
   depends_on "cmake" => :build
 
   def install
+    ENV.runtime_cpu_detection
     system "cmake", "-S", ".", "-B", "build",
            "-DCMAKE_BUILD_TYPE=Release",
            "-DCMAKE_OSX_DEPLOYMENT_TARGET=14.0"
