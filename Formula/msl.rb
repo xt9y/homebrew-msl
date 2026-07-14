@@ -1,12 +1,12 @@
 class Msl < Formula
-  desc "macOS Subsystem for Linux — run Arch Linux on Apple's Virtualization.framework"
+  desc "macOS Subsystem for Linux — run Arch Linux ARM via Virtualization.framework"
   homepage "https://github.com/xt9y/msl"
   url "https://github.com/xt9y/msl/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "9c76d8d74af1ff2e758203a6b20c069091539221b87385c941d75b23033ff4d2"
+  sha256 "d81bae1d8cae7e6cf1fbf4842bf524e4772abd9ff43fa4595892963316a50cfa"
   license "MIT"
 
-  depends_on :macos
   depends_on xcode: ["15.0", :build]
+  depends_on :macos
 
   def install
     system "make"
@@ -14,6 +14,6 @@ class Msl < Formula
   end
 
   test do
-    system "#{bin}/msl", "--version"
+    system bin/"msl", "--version"
   end
 end
