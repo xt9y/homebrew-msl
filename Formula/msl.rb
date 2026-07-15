@@ -1,8 +1,8 @@
 class Msl < Formula
   desc "macOS Subsystem for Linux — run Arch Linux ARM via Virtualization.framework"
   homepage "https://github.com/xt9y/msl"
-  url "https://github.com/xt9y/msl/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "b8e4e8718c15d09869c867df2eb5a1b6ceb62e5397151f6b93188c1ca81d94ec"
+  url "https://github.com/xt9y/msl/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "ccf3f82264e2203bcb18c29d43e0ff540846713bbdc6791f322776f465219add"
   license "MIT"
 
   depends_on xcode: ["15.0", :build]
