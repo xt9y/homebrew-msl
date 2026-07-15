@@ -11,6 +11,16 @@ class Msl < Formula
   def install
     system "make"
     bin.install "build/msl"
+    bin.install "build/msld" if File.exist?("build/msld")
+  end
+
+  def caveats
+    <<~EOS
+      The guest daemon (msld) requires aarch64-linux-musl-gcc to build:
+        brew tap filosottile/musl-cross
+        brew install musl-cross --with-aarch64
+      Then run: brew reinstall msl && msl --setup
+    EOS
   end
 
   test do
