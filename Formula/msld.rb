@@ -1,8 +1,8 @@
 class Msld < Formula
   desc "Guest daemon for msl (macOS Subsystem for Linux)"
   homepage "https://github.com/xt9y/msl"
-  url "https://github.com/xt9y/msl/archive/refs/tags/v0.7.33.tar.gz"
-  sha256 "ca56133dbea27b308ed5b881a04e3356f465e69f40576d2a11e25ca192dbfad8"
+  url "https://github.com/xt9y/msl/archive/refs/tags/v0.7.34.tar.gz"
+  sha256 "396c9362087967daf45d14f7be23520b0d812e7de02051653f68df780e1572c6"
   license "MIT"
 
   depends_on "zig"
